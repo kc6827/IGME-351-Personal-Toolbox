@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50%" height="100%" viewBox="0 0 100 100">
+                    
+            <circle cx="14" cy="47" r="12.5" stroke="red" fill="none"></circle> 
+                    
+            <ellipse cx="22" cy="31" rx="12.5" ry="7.5" stroke="crimson" fill="none"></ellipse> 
+                    
+            <g transform="rotate(-25, 24, 16.7)">
+                <rect x="11.5" y="4.199999999999999" width="25" height="25" stroke="darkred" fill="none"></rect>
+                          
+            </g>
+                    
+            <circle cx="43" cy="14" r="12.5" stroke="darkred" fill="none"></circle> 
+                    
+            <g transform="rotate(-6, 57, 37)">
+                <rect x="44.5" y="24.5" width="25" height="25" stroke="red" fill="none"></rect>
+                          
+            </g>
+                    
+            <polygon points="55,63.5,85,63,60,55,75,75" stroke="crimson" fill="none"></polygon> 
+                    
+            <ellipse cx="55" cy="63.5" rx="10" ry="17.5" stroke="darkred" fill="none"></ellipse> 
+                    
+            <circle cx="66" cy="81.2" r="12.5" stroke="red" fill="none"></circle> 
+                    
+            <polygon points="70,83.5,97,83,80,98" stroke="red" fill="none"></polygon> 
+                </svg>

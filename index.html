@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SVG Generator</title>
+</head>
+
+<body>
+    <svg id="ogRouge"></svg>
+    <script>
+
+
+        //reusable components
+        const rect = (x, y, width, height, rotate, stroke, fill) => {
+            return `
+            <g transform="rotate(${rotate}, ${x}, ${y})">
+                <rect x="${x - width / 2}" y="${y - height / 2}" width="${width}" 
+                          height="${height}" stroke="${stroke}" fill="${fill}" />
+                          
+            </g>`
+        }
+
+        const circ = (x, y, d, stroke, fill) => {
+            return `
+            <circle cx="${x}" cy="${y}" r="${d / 2}" stroke="${stroke}" fill="${fill}" /> `
+        }
+
+        const elpse = (x, y, dx, dy, stroke, fill) => {
+            return `
+            <ellipse cx="${x}" cy="${y}" rx="${dx / 2}" ry="${dy / 2}" stroke="${stroke}" fill="${fill}" /> `
+        }
+
+        const line = (x1, y1, x2, y2, stroke) => {
+            return `
+            <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" /> `
+        }
+
+        const poly = (stroke, fill, ...points) => {
+            return `
+            <polygon points="${points}" stroke="${stroke}" fill="${fill}" /> `
+        }
+
+        //svgs
+
+        const makeSvg1 = () => {
+            return `
+                <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="100%" viewBox="0 0 100 100">
+                    ${rect(14, 47, 25, 25, 5, 'crimson', 'none')}
+                    ${rect(22, 31, 25, 25, 45, 'red', 'none')}
+                    ${rect(24, 16.7, 25, 25, -25, 'darkred', 'none')}
+                    ${rect(43, 14, 25, 25, -4, 'crimson', 'none')}
+                    ${rect(57, 37, 25, 25, -6, 'red', 'none')}
+                    ${rect(67, 59, 25, 25, 3, 'darkred', 'none')}
+                    ${rect(55, 63.5, 25, 25, -18, 'darkred', 'none')}
+                    ${rect(66, 81.2, 25, 25, -46, 'crimson', 'none')}
+                    ${rect(80, 83.5, 25, 25, 16, 'red', 'none')}
+                </svg
+            `;
+        }
+
+        const makeSvg2 = () => {
+            return `
+                <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="100%" viewBox="0 0 100 100">
+                    ${circ(14, 47, 25,'red', 'none')}
+                    ${elpse(22, 31, 25, 15, 'crimson', 'none')}
+                    ${rect(24, 16.7, 25, 25, -25, 'darkred', 'none')}
+                    ${circ(43, 14, 25, 'darkred', 'none')}
+                    ${rect(57, 37, 25, 25, -6, 'red', 'none')}
+                    ${poly('crimson', 'none', 55, 63.5, 85, 63, 60, 55, 75, 75)}
+                    ${elpse(55, 63.5, 20, 35, 'darkred', 'none')}
+                    ${circ(66, 81.2, 25, 'red', 'none')}
+                    ${poly('red', 'none', 70, 83.5, 97, 83, 80, 98)}
+                </svg
+            `;
+        }
+
+        const svg = makeSvg1();
+
+        document.querySelector('svg').outerHTML = svg;
+    </script>
+</body>
+
+</html>
